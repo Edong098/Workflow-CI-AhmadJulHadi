@@ -6,8 +6,8 @@ on:
       - main
       - master
     paths:
-      - 'Workflow-CI/MLProject/titanic_preprocessed.csv' # retrain hanya jika dataset berubah
-  workflow_dispatch: # memungkinkan trigger manual dari GitHub UI
+      - 'Workflow-CI/MLProject/titanic_preprocessed.csv'
+  workflow_dispatch: 
 
 jobs:
   retrain:
