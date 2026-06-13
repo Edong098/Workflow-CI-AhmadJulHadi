@@ -33,7 +33,7 @@ jobs:
 
     - name: Run MLflow Retrain Project
       run: |
-        mlflow run Workflow-CI/MLProject --no-conda
+        mlflow run Workflow-CI/MLProject --env-manager local
 
     - name: Copy Model Artifacts
       run: |
