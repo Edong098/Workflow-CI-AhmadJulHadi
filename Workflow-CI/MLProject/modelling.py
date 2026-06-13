@@ -7,7 +7,8 @@ import os
 import shutil
 
 def main():
-    mlflow.set_experiment("Titanic_Classifier_Retrain")
+    if "MLFLOW_RUN_ID" not in os.environ:
+        mlflow.set_experiment("Titanic_Classifier_Retrain")
 
     df = pd.read_csv("titanic_preprocessed.csv")
     X = df.drop(columns=["Survived"])
